@@ -1,0 +1,510 @@
+{
+  "users": [
+    {
+      "email": "user@email.com",
+      "password": "$2a$10$Wx9BVzHMoXyOb3fE5eNcOeF7Stk497ASlmwusYEkW0upR65NXz.Xe",
+      "id": 1
+    },
+    {
+      "email": "andrews@test.com",
+      "password": "$2a$10$0l4bQvb8vUDFSLJN3KLqcekei.YQCVJGX3Lt8iVPc5qlXMSti6e3m",
+      "id": 2
+    }
+  ],
+  "properties": [
+    {
+      "name": "Copacabana Beach House",
+      "location": "Rio de Janeiro, Brazil",
+      "id": 1
+    },
+    {
+      "name": "Napa Valley Vineyard Retreat",
+      "location": "Napa, California",
+      "id": 2
+    },
+    {
+      "name": "Hollywood Hills Villa",
+      "location": "Los Angeles, California",
+      "id": 3
+    },
+    {
+      "name": "SoHo Loft",
+      "location": "New York, New York",
+      "id": 4
+    },
+    {
+      "name": "Santorini Sunset Villa",
+      "location": "Santorini, Greece",
+      "id": 5
+    },
+    {
+      "name": "Tokyo Shibuya Apartment",
+      "location": "Tokyo, Japan",
+      "id": 6
+    },
+    {
+      "name": "Sydney Harbour View Apartment",
+      "location": "Sydney, Australia",
+      "id": 7
+    },
+    {
+      "name": "Paris Champs-Élysées Flat",
+      "location": "Paris, France",
+      "id": 8
+    },
+    {
+      "name": "London River Thames Condo",
+      "location": "London, United Kingdom",
+      "id": 9
+    },
+    {
+      "name": "Dubai Marina Penthouse",
+      "location": "Dubai, UAE",
+      "id": 10
+    },
+    {
+      "name": "Aspen Mountain Lodge",
+      "location": "Aspen, Colorado",
+      "id": 11
+    },
+    {
+      "name": "Miami Beachfront Condo",
+      "location": "Miami, Florida",
+      "id": 12
+    },
+    {
+      "name": "Maui Oceanfront Cottage",
+      "location": "Maui, Hawaii",
+      "id": 13
+    },
+    {
+      "name": "Rome Colosseum View Apartment",
+      "location": "Rome, Italy",
+      "id": 14
+    },
+    {
+      "name": "Amsterdam Canal House",
+      "location": "Amsterdam, Netherlands",
+      "id": 15
+    },
+    {
+      "name": "Barcelona Gothic Quarter Loft",
+      "location": "Barcelona, Spain",
+      "id": 16
+    },
+    {
+      "name": "Cape Town Seaside Villa",
+      "location": "Cape Town, South Africa",
+      "id": 17
+    },
+    {
+      "name": "Toronto Downtown Condo",
+      "location": "Toronto, Canada",
+      "id": 18
+    },
+    {
+      "name": "Kyoto Traditional Ryokan",
+      "location": "Kyoto, Japan",
+      "id": 19
+    },
+    {
+      "name": "Bangkok Riverside Apartment",
+      "location": "Bangkok, Thailand",
+      "id": 20
+    }
+  ],
+  "bookings": [
+    {
+      "name": "Barbara",
+      "propertyId": 1,
+      "startDate": "2024-07-01",
+      "endDate": "2024-07-05",
+      "pricePerDay": "150",
+      "id": 1
+    },
+    {
+      "name": "Michael Johnson",
+      "propertyId": 3,
+      "startDate": "2024-07-11",
+      "endDate": "2024-07-15",
+      "pricePerDay": "180",
+      "id": 3
+    },
+    {
+      "name": "Emily Davis",
+      "propertyId": 4,
+      "startDate": "2024-07-16",
+      "endDate": "2024-07-20",
+      "pricePerDay": "220",
+      "id": 4
+    },
+    {
+      "name": "Chris Brown",
+      "propertyId": 5,
+      "startDate": "2024-07-21",
+      "endDate": "2024-07-25",
+      "pricePerDay": "250",
+      "id": 5
+    },
+    {
+      "name": "Jessica Wilson",
+      "propertyId": 6,
+      "startDate": "2024-07-26",
+      "endDate": "2024-07-30",
+      "pricePerDay": "200",
+      "id": 6
+    },
+    {
+      "name": "Daniel Martinez",
+      "propertyId": 7,
+      "startDate": "2024-08-01",
+      "endDate": "2024-08-05",
+      "pricePerDay": "230",
+      "id": 7
+    },
+    {
+      "name": "Laura Garcia",
+      "propertyId": 8,
+      "startDate": "2024-08-06",
+      "endDate": "2024-08-10",
+      "pricePerDay": "210",
+      "id": 8
+    },
+    {
+      "name": "David Miller",
+      "propertyId": 9,
+      "startDate": "2024-08-11",
+      "endDate": "2024-08-15",
+      "pricePerDay": "240",
+      "id": 9
+    },
+    {
+      "name": "Sarah Lee",
+      "propertyId": 10,
+      "startDate": "2024-08-16",
+      "endDate": "2024-08-20",
+      "pricePerDay": "260",
+      "id": 10
+    },
+    {
+      "name": "Robert Moore",
+      "propertyId": 11,
+      "startDate": "2024-08-21",
+      "endDate": "2024-08-25",
+      "pricePerDay": "280",
+      "id": 11
+    },
+    {
+      "name": "Linda Taylor",
+      "propertyId": 12,
+      "startDate": "2024-08-26",
+      "endDate": "2024-08-30",
+      "pricePerDay": "300",
+      "id": 12
+    },
+    {
+      "name": "Kevin Anderson",
+      "propertyId": 13,
+      "startDate": "2024-09-01",
+      "endDate": "2024-09-05",
+      "pricePerDay": "320",
+      "id": 13
+    },
+    {
+      "name": "Nancy Thomas",
+      "propertyId": 14,
+      "startDate": "2024-09-06",
+      "endDate": "2024-09-10",
+      "pricePerDay": "340",
+      "id": 14
+    },
+    {
+      "name": "Steven Jackson",
+      "propertyId": 15,
+      "startDate": "2024-09-11",
+      "endDate": "2024-09-15",
+      "pricePerDay": "360",
+      "id": 15
+    },
+    {
+      "name": "Betty White",
+      "propertyId": 16,
+      "startDate": "2024-09-16",
+      "endDate": "2024-09-20",
+      "pricePerDay": "380",
+      "id": 16
+    },
+    {
+      "name": "Charles Harris",
+      "propertyId": 17,
+      "startDate": "2024-09-21",
+      "endDate": "2024-09-25",
+      "pricePerDay": "400",
+      "id": 17
+    },
+    {
+      "name": "Margaret Clark",
+      "propertyId": 18,
+      "startDate": "2024-09-26",
+      "endDate": "2024-09-30",
+      "pricePerDay": "420",
+      "id": 18
+    },
+    {
+      "name": "Joseph Lewis",
+      "propertyId": 19,
+      "startDate": "2024-10-01",
+      "endDate": "2024-10-05",
+      "pricePerDay": "440",
+      "id": 19
+    },
+    {
+      "name": "Patricia Robinson",
+      "propertyId": 20,
+      "startDate": "2024-10-06",
+      "endDate": "2024-10-10",
+      "pricePerDay": "460",
+      "id": 20
+    },
+    {
+      "name": "Kenneth Walker",
+      "propertyId": 1,
+      "startDate": "2024-10-11",
+      "endDate": "2024-10-15",
+      "pricePerDay": "480",
+      "id": 21
+    },
+    {
+      "name": "Sandra Hall",
+      "propertyId": 2,
+      "startDate": "2024-10-16",
+      "endDate": "2024-10-20",
+      "pricePerDay": "500",
+      "id": 22
+    },
+    {
+      "name": "Paul Allen",
+      "propertyId": 3,
+      "startDate": "2024-10-21",
+      "endDate": "2024-10-25",
+      "pricePerDay": "520",
+      "id": 23
+    },
+    {
+      "name": "Barbara Young",
+      "propertyId": 4,
+      "startDate": "2024-10-26",
+      "endDate": "2024-10-30",
+      "pricePerDay": "540",
+      "id": 24
+    },
+    {
+      "name": "Brian Hernandez",
+      "propertyId": 5,
+      "startDate": "2024-11-01",
+      "endDate": "2024-11-05",
+      "pricePerDay": "560",
+      "id": 25
+    },
+    {
+      "name": "Dorothy King",
+      "propertyId": 6,
+      "startDate": "2024-11-06",
+      "endDate": "2024-11-10",
+      "pricePerDay": "580",
+      "id": 26
+    },
+    {
+      "name": "Jason Wright",
+      "propertyId": 7,
+      "startDate": "2024-11-11",
+      "endDate": "2024-11-15",
+      "pricePerDay": "600",
+      "id": 27
+    },
+    {
+      "name": "Betty Lopez",
+      "propertyId": 8,
+      "startDate": "2024-11-16",
+      "endDate": "2024-11-20",
+      "pricePerDay": "620",
+      "id": 28
+    },
+    {
+      "name": "Charles Hill",
+      "propertyId": 9,
+      "startDate": "2024-11-21",
+      "endDate": "2024-11-25",
+      "pricePerDay": "640",
+      "id": 29
+    },
+    {
+      "name": "Nancy Scott",
+      "propertyId": 10,
+      "startDate": "2024-11-26",
+      "endDate": "2024-11-30",
+      "pricePerDay": "660",
+      "id": 30
+    },
+    {
+      "name": "Mark Green",
+      "propertyId": 11,
+      "startDate": "2024-12-01",
+      "endDate": "2024-12-05",
+      "pricePerDay": "680",
+      "id": 31
+    },
+    {
+      "name": "Mary Adams",
+      "propertyId": 12,
+      "startDate": "2024-12-06",
+      "endDate": "2024-12-10",
+      "pricePerDay": "700",
+      "id": 32
+    },
+    {
+      "name": "Steven Baker",
+      "propertyId": 13,
+      "startDate": "2024-12-11",
+      "endDate": "2024-12-15",
+      "pricePerDay": "720",
+      "id": 33
+    },
+    {
+      "name": "Laura Nelson",
+      "propertyId": 14,
+      "startDate": "2024-12-16",
+      "endDate": "2024-12-20",
+      "pricePerDay": "740",
+      "id": 34
+    },
+    {
+      "name": "David Carter",
+      "propertyId": 15,
+      "startDate": "2024-12-21",
+      "endDate": "2024-12-25",
+      "pricePerDay": "760",
+      "id": 35
+    },
+    {
+      "name": "Sarah Mitchell",
+      "propertyId": 16,
+      "startDate": "2024-12-26",
+      "endDate": "2024-12-30",
+      "pricePerDay": "780",
+      "id": 36
+    },
+    {
+      "name": "Daniel Rivera",
+      "propertyId": 17,
+      "startDate": "2025-01-01",
+      "endDate": "2025-01-05",
+      "pricePerDay": "800",
+      "id": 37
+    },
+    {
+      "name": "Jessica Roberts",
+      "propertyId": 18,
+      "startDate": "2025-01-06",
+      "endDate": "2025-01-10",
+      "pricePerDay": "820",
+      "id": 38
+    },
+    {
+      "name": "Michael Lee",
+      "propertyId": 19,
+      "startDate": "2025-01-11",
+      "endDate": "2025-01-15",
+      "pricePerDay": "840",
+      "id": 39
+    },
+    {
+      "name": "Emily Perez",
+      "propertyId": 20,
+      "startDate": "2025-01-16",
+      "endDate": "2025-01-20",
+      "pricePerDay": "860",
+      "id": 40
+    },
+    {
+      "name": "Marcos",
+      "propertyId": 1,
+      "startDate": "2024-08-13",
+      "endDate": "2024-08-23",
+      "pricePerDay": "250",
+      "id": 41
+    },
+    {
+      "name": "Jhony",
+      "propertyId": 1,
+      "startDate": "2024-09-09",
+      "endDate": "2024-09-19",
+      "pricePerDay": "300",
+      "id": 42
+    },
+    {
+      "name": "Paulo",
+      "propertyId": 1,
+      "startDate": "2024-07-14",
+      "endDate": "2024-07-17",
+      "pricePerDay": "244",
+      "id": 43
+    },
+    {
+      "name": "Ben",
+      "propertyId": 1,
+      "startDate": "2024-07-18",
+      "endDate": "2024-07-23",
+      "pricePerDay": "200",
+      "id": 44
+    },
+    {
+      "name": "Julia",
+      "propertyId": 1,
+      "startDate": "2024-08-07",
+      "endDate": "2024-08-09",
+      "pricePerDay": "400",
+      "id": 45
+    },
+    {
+      "name": "André",
+      "propertyId": 1,
+      "startDate": "2024-08-12",
+      "endDate": "2024-08-12",
+      "pricePerDay": "23",
+      "id": 46
+    },
+    {
+      "name": "Andrews",
+      "propertyId": 1,
+      "startDate": "2024-07-30",
+      "endDate": "2024-07-31",
+      "pricePerDay": "34",
+      "id": 47
+    },
+    {
+      "name": "Scott",
+      "propertyId": 1,
+      "startDate": "2024-07-25",
+      "endDate": "2024-07-26",
+      "pricePerDay": "234",
+      "id": 48
+    },
+    {
+      "name": "Jorge",
+      "propertyId": 1,
+      "startDate": "2024-08-27",
+      "endDate": "2024-08-29",
+      "pricePerDay": "300",
+      "id": 49
+    },
+    {
+      "name": "Jason",
+      "propertyId": 21,
+      "startDate": "2024-07-16",
+      "endDate": "2024-07-24",
+      "pricePerDay": "200",
+      "id": 50
+    }
+  ]
+}
