@@ -8,7 +8,7 @@ interface BookingState {
   error: string | null;
 }
 
-const initialState: BookingState = {
+export const initialState: BookingState = {
   bookings: [],
   loading: false,
   error: null,

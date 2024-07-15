@@ -10,7 +10,7 @@ interface PropertyState {
   error: string | null;
 }
 
-const initialState: PropertyState = {
+export const initialState: PropertyState = {
   properties: [],
   selectedPropertyId: null,
   selectedProperty: null,

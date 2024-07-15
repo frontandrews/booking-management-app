@@ -1,10 +1,10 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 import axios from 'axios';
 import { API_URL } from '@/constants';
 import { isValid, parseISO } from 'date-fns';
 import { handleAxiosError } from '@/utils';
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   try {
     const { name, propertyId, startDate, endDate, pricePerDay } =
       await request.json();
@@ -15,14 +15,14 @@ export async function POST(request: Request) {
           message:
             'name, propertyId, startDate, endDate, and pricePerDay are required',
         },
-        { status: 400 },
+        { status: 400 }
       );
     }
 
     if (!isValid(parseISO(startDate)) || !isValid(parseISO(endDate))) {
       return NextResponse.json(
         { message: 'Invalid date format' },
-        { status: 400 },
+        { status: 400 }
       );
     }
 

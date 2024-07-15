@@ -33,9 +33,15 @@ export default function PropertyList() {
   return (
     <div className="border p-6">
       <div className="flex justify-between items-center flex-row">
-        <h1 className="flex items-center gap-2 text-2xl leading-[0.9] font-semibold leading-6 py-3 lg:py-6">
+        <h1
+          data-testid="property-header"
+          className="flex items-center gap-2 text-2xl font-semibold leading-6 py-3 lg:py-6"
+        >
           Properties{' '}
-          <span className="text-sm leading-[0.9] text-gray-500">
+          <span
+            data-testid="property-count"
+            className="text-sm leading-[0.9] text-gray-500"
+          >
             ({filteredProperties.length}/{properties.length})
           </span>
         </h1>

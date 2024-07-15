@@ -17,7 +17,10 @@ export const BookingHeader = ({
   onToday,
 }: BookingHeaderProps) => {
   return (
-    <header className="flex flex-col items-center justify-between border-b border-gray-200 py-4 lg:flex-row lg:flex-none">
+    <header
+      data-testid="booking-dialog"
+      className="flex flex-col items-center justify-between border-b border-gray-200 py-4 lg:flex-row lg:flex-none"
+    >
       <h1 className="text-2xl font-semibold leading-6 text-gray-900 mb-4 lg:mb-0">
         <time dateTime={format(currentMonth, 'yyyy-MM')}>
           {format(currentMonth, 'MMMM yyyy')}

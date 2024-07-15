@@ -35,7 +35,7 @@ export function BookingDialog({
           <Button
             variant="default"
             size="sm"
-            className="ml-2"
+            className={`ml-2 ${buttonClassName}`}
             onClick={() => setIsOpen(true)}
           >
             <Plus className="w-4 h-4 mr-2" />

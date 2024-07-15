@@ -226,13 +226,13 @@ export function PropertyStats() {
       <Card className="rounded-none">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium flex">
-            <button onClick={handlePreviousMonth}>
+            <button aria-label="Previous month" onClick={handlePreviousMonth}>
               <ChevronLeft className="h-4 w-4" />
             </button>
             <div className="min-w-[110px] text-center">
               {format(selectedMonth, 'MMMM yyyy')}
             </div>
-            <button onClick={handleNextMonth}>
+            <button aria-label="Next month" onClick={handleNextMonth}>
               <ChevronRight className="h-4 w-4" />
             </button>
           </CardTitle>

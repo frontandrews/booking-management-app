@@ -7,7 +7,10 @@ const navigation = [
 
 export const DesktopNavigation = () => {
   return (
-    <div className="hidden lg:flex lg:gap-x-12">
+    <div
+      className="hidden lg:flex lg:gap-x-12"
+      data-testid="desktop-navigation"
+    >
       {navigation.map((item) => (
         <NavigationItem key={item.name} name={item.name} href={item.href} />
       ))}

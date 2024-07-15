@@ -1,9 +1,9 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import axios from 'axios';
 import { API_URL } from '@/constants';
 import { handleAxiosError } from '@/utils';
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   try {
     const { name, location } = await request.json();
 
