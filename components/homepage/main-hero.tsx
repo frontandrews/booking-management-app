@@ -12,7 +12,7 @@ export default function MainHero() {
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         ></div>
-        <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-56">
+        <div className="slide-up mx-auto max-w-4xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Vacation Rental Software

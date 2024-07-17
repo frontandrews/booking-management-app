@@ -3,20 +3,20 @@
 import { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { useDispatch, useSelector } from 'react-redux';
 import { logOut } from '@/redux/features/auth/slice';
 import { RootState, AppDispatch } from '@/redux/store';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import { DesktopNavigation } from './desktop-navigation';
 import { MobileNavigation } from './mobile-navigation';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
 export default function Header() {
   const router = useRouter();
   const pathname = usePathname();
-  const isAuthenticated = useSelector(
+  const isAuthenticated = useAppSelector(
     (state: RootState) => state.auth.user.isAuthenticated,
   );
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useAppDispatch<AppDispatch>();
   const [hydrated, setHydrated] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -43,7 +43,7 @@ export default function Header() {
     <header className="bg-primary">
       <nav
         aria-label="Global"
-        className="flex items-center justify-between p-6 lg:px-8  container mx-auto"
+        className="slide-up flex items-center justify-between p-6 lg:px-8  container mx-auto"
       >
         <div className="flex lg:flex-1">
           <Link

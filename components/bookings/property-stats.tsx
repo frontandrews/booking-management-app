@@ -1,8 +1,6 @@
 import { DollarSign, ChevronLeft, ChevronRight, Users } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '@/redux/store';
 import {
   differenceInDays,
   endOfDay,
@@ -20,13 +18,14 @@ import {
   addYears,
 } from 'date-fns';
 import { Booking } from './types';
+import { useAppSelector } from '@/redux/hooks';
 
 export function PropertyStats() {
-  const bookings = useSelector(
-    (state: RootState) => state.booking.bookings,
+  const bookings = useAppSelector(
+    (state) => state.booking.bookings,
   ) as Booking[];
-  const propertyId = useSelector(
-    (state: RootState) => state.property.selectedPropertyId,
+  const propertyId = useAppSelector(
+    (state) => state.property.selectedPropertyId,
   ) as number;
 
   const [thisMonth, setThisMonth] = useState<number>(0);

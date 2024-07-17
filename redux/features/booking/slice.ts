@@ -1,8 +1,8 @@
+import { Booking } from '@/components/bookings/types';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { Booking } from '@/components/bookings/types';
 
-interface BookingState {
+export interface BookingState {
   bookings: Booking[];
   loading: boolean;
   error: string | null;
@@ -57,7 +57,7 @@ export const deleteBooking = createAsyncThunk(
   },
 );
 
-const bookingSlice = createSlice({
+export const bookingSlice = createSlice({
   name: 'booking',
   initialState,
   reducers: {},

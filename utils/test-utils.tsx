@@ -1,9 +1,4 @@
-// utils/test-utils.ts
-import {
-  configureStore,
-  EnhancedStore,
-  PreloadedState,
-} from '@reduxjs/toolkit';
+import { configureStore, EnhancedStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import { render, RenderResult } from '@testing-library/react';
 import { ReactElement, PropsWithChildren } from 'react';
@@ -14,15 +9,8 @@ import bookingReducer from '@/redux/features/booking/slice';
 import { RootState } from '@/redux/store';
 
 interface CreateTestStoreOptions {
-  preloadedState?: PreloadedState<RootState>;
+  preloadedState?: Partial<RootState>;
 }
-
-const initialPropertyState = {
-  properties: [],
-  selectedPropertyId: null,
-  loading: false,
-  error: null,
-};
 
 export function createTestStore({
   preloadedState,
@@ -30,19 +18,19 @@ export function createTestStore({
   return configureStore({
     reducer: {
       auth: authReducer,
+      // @ts-ignore
       property: propertyReducer,
+      // @ts-ignore
       booking: bookingReducer,
     },
+    preloadedState,
     middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
-    preloadedState: {
-      property: initialPropertyState,
-      ...preloadedState,
-    },
   });
 }
 
 interface RenderWithProvidersOptions {
   store?: EnhancedStore<RootState>;
+  preloadedState?: Partial<RootState>;
 }
 
 const AllProviders: React.FC<
@@ -59,10 +47,11 @@ const AllProviders: React.FC<
 
 export function renderWithProviders(
   ui: ReactElement,
-  { store }: RenderWithProvidersOptions = {},
-): RenderResult {
+  { store, preloadedState }: RenderWithProvidersOptions = {},
+): { store: EnhancedStore<RootState> } & RenderResult {
   if (!store) {
-    store = createTestStore();
+    store = createTestStore({ preloadedState });
   }
-  return render(<AllProviders store={store}>{ui}</AllProviders>);
+  const result = render(<AllProviders store={store}>{ui}</AllProviders>);
+  return { store, ...result };
 }

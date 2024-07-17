@@ -13,7 +13,7 @@ describe('BookingDialog Component', () => {
   });
 
   test('renders the default button and opens the dialog', () => {
-    renderWithProviders(<BookingDialog />, { store });
+    const { container } = renderWithProviders(<BookingDialog />, { store });
 
     const button = screen.getByRole('button', { name: /reservation/i });
     expect(button).toBeInTheDocument();
@@ -22,10 +22,12 @@ describe('BookingDialog Component', () => {
 
     const dialogTitle = screen.getByText(/new reservation/i);
     expect(dialogTitle).toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 
   test('renders children as the trigger and opens the dialog', () => {
-    renderWithProviders(
+    const { container } = renderWithProviders(
       <BookingDialog>
         <Button>Open Dialog</Button>
       </BookingDialog>,
@@ -39,20 +41,26 @@ describe('BookingDialog Component', () => {
 
     const dialogTitle = screen.getByText(/new reservation/i);
     expect(dialogTitle).toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 
   test('displays Edit Reservation when bookingId is provided', () => {
-    renderWithProviders(<BookingDialog bookingId={1} />, { store });
+    const { container } = renderWithProviders(<BookingDialog bookingId={1} />, {
+      store,
+    });
 
     const button = screen.getByRole('button', { name: /reservation/i });
     fireEvent.click(button);
 
     const dialogTitle = screen.getByText(/edit reservation/i);
     expect(dialogTitle).toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 
   test('closes the dialog when BookingForm calls onClose', () => {
-    renderWithProviders(<BookingDialog />, { store });
+    const { container } = renderWithProviders(<BookingDialog />, { store });
 
     const button = screen.getByRole('button', { name: /reservation/i });
     fireEvent.click(button);
@@ -61,5 +69,7 @@ describe('BookingDialog Component', () => {
     fireEvent.click(closeButton);
 
     expect(screen.queryByText(/new reservation/i)).not.toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 });

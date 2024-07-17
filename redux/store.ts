@@ -5,9 +5,9 @@ import bookingReducer from './features/booking/slice';
 
 export const store = configureStore({
   reducer: {
-    auth: authReducer,
     property: propertyReducer,
     booking: bookingReducer,
+    auth: authReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
   devTools: process.env.NODE_ENV !== 'production',
@@ -15,3 +15,4 @@ export const store = configureStore({
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
+export type AppStore = typeof store;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
@@ -72,10 +72,12 @@ describe('PropertyStats Component', () => {
     );
 
   test('renders correctly and displays the initial stats', () => {
-    renderComponent();
+    const { container } = renderComponent();
 
     expect(screen.getByText('Guests This Month')).toBeInTheDocument();
     expect(screen.getByText('This Month')).toBeInTheDocument();
     expect(screen.getByText('This Year')).toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 });

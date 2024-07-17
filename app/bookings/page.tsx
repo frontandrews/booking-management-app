@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { PropertyDialog } from '@/components/bookings/property-dialog';
 import PropertyList from '@/components/bookings/property-list';
 import SectionHeading from '@/components/ui/section-heading';
@@ -10,22 +9,20 @@ import {
   fetchProperties,
   setSelectedPropertyId,
 } from '@/redux/features/property/slice';
-import { RootState, AppDispatch } from '@/redux/store';
 import EmptyState from '@/components/ui/empty-state';
 import { ThreeDots } from 'react-loader-spinner';
 import { fetchBookings } from '@/redux/features/booking/slice';
 import { PropertyStats } from '@/components/bookings/property-stats';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
 export default function BookingsPage() {
-  const dispatch = useDispatch<AppDispatch>();
-  const selectedPropertyId = useSelector(
-    (state: RootState) => state.property.selectedPropertyId,
+  const dispatch = useAppDispatch();
+  const selectedPropertyId = useAppSelector(
+    (state) => state.property.selectedPropertyId,
   );
-  const bookings = useSelector((state: RootState) => state.booking.bookings);
-  const properties = useSelector(
-    (state: RootState) => state.property.properties,
-  );
-  const loading = useSelector((state: RootState) => state.property.loading);
+  const bookings = useAppSelector((state) => state.booking.bookings);
+  const properties = useAppSelector((state) => state.property.properties);
+  const loading = useAppSelector((state) => state.property.loading);
 
   const [initialLoading, setInitialLoading] = useState(true);
   const hasAutoSelected = useRef(false);

@@ -13,7 +13,7 @@ jest.mock('@/components/layout/navigation-item', () => ({
 
 describe('DesktopNavigation Component', () => {
   test('renders the navigation items correctly', () => {
-    render(<DesktopNavigation />);
+    const { container } = render(<DesktopNavigation />);
 
     const linkedinItem = screen.getByTestId('nav-item-Linkedin');
     expect(linkedinItem).toBeInTheDocument();
@@ -30,12 +30,16 @@ describe('DesktopNavigation Component', () => {
       'href',
       'https://github.com/frontandrews',
     );
+
+    expect(container).toMatchSnapshot();
   });
 
   test('applies correct classes to the navigation container', () => {
-    render(<DesktopNavigation />);
+    const { container } = render(<DesktopNavigation />);
 
     const navigationContainer = screen.getByTestId('desktop-navigation');
     expect(navigationContainer).toHaveClass('hidden lg:flex lg:gap-x-12');
+
+    expect(container).toMatchSnapshot();
   });
 });

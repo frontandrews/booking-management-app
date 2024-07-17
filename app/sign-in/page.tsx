@@ -3,15 +3,14 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/navigation';
 import { logInAsync } from '@/redux/features/auth/slice';
-import { RootState, AppDispatch } from '@/redux/store';
 import { Button } from '@/components/ui/button';
 import { useEffect, useState } from 'react';
 import { useToast } from '@/components/ui/use-toast';
 import axios from 'axios';
 import FormField from '@/components/ui/form-field';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
 const formSchema = z.object({
   email: z.string().email('Invalid email address'),
@@ -30,10 +29,10 @@ export default function SignIn() {
     resolver: zodResolver(formSchema),
   });
 
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useAppDispatch();
   const router = useRouter();
-  const isAuthenticated = useSelector(
-    (state: RootState) => state.auth.user.isAuthenticated,
+  const isAuthenticated = useAppSelector(
+    (state) => state.auth.user.isAuthenticated,
   );
 
   useEffect(() => {

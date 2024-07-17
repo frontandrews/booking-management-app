@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainHero Component applies correct classes to elements 1`] = `
+<div>
+  <div
+    class="bg-primary"
+  >
+    <div
+      class="relative isolate overflow-hidden pt-14"
+    >
+      <div
+        aria-hidden="true"
+        class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+      />
+      <div
+        class="slide-up mx-auto max-w-4xl py-32 sm:py-48 lg:py-56"
+      >
+        <div
+          class="text-center"
+        >
+          <h1
+            class="text-4xl font-bold tracking-tight text-white sm:text-6xl"
+          >
+            Vacation Rental Software
+          </h1>
+          <p
+            class="mt-6 text-lg leading-8 text-gray-300"
+          >
+            Do less & earn more! Our app helps property managers scale and grow their businesses with vacation the best rental management software.
+          </p>
+          <div
+            class="mt-10 flex items-center justify-center gap-x-6"
+          >
+            <a
+              class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+              href="/sign-in"
+            >
+              Get started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MainHero Component renders the main hero component correctly 1`] = `
+<div>
+  <div
+    class="bg-primary"
+  >
+    <div
+      class="relative isolate overflow-hidden pt-14"
+    >
+      <div
+        aria-hidden="true"
+        class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+      />
+      <div
+        class="slide-up mx-auto max-w-4xl py-32 sm:py-48 lg:py-56"
+      >
+        <div
+          class="text-center"
+        >
+          <h1
+            class="text-4xl font-bold tracking-tight text-white sm:text-6xl"
+          >
+            Vacation Rental Software
+          </h1>
+          <p
+            class="mt-6 text-lg leading-8 text-gray-300"
+          >
+            Do less & earn more! Our app helps property managers scale and grow their businesses with vacation the best rental management software.
+          </p>
+          <div
+            class="mt-10 flex items-center justify-center gap-x-6"
+          >
+            <a
+              class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+              href="/sign-in"
+            >
+              Get started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

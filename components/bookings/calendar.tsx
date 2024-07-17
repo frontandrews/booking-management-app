@@ -13,9 +13,7 @@ import { BookingDialog } from './booking-dialog';
 interface CalendarProps {
   days: Day[];
   currentMonth: Date;
-  selectedDate: Date;
   bookings: Booking[];
-  onDateSelect: (date: Day) => void;
 }
 
 interface BookingListItemProps {
@@ -53,6 +51,7 @@ const BookingListItem = ({
         ),
       }}
       className="p-1 rounded-md cursor-pointer"
+      data-testid={`booking-${booking.id}`}
     >
       <BookingDialog
         bookingId={booking.id}
@@ -152,6 +151,7 @@ const MobileBookingList = ({ days, bookings }: MobileBookingListProps) => {
           <div
             key={day.toString()}
             className="bg-white px-4 py-2 border-b border-gray-200"
+            data-testid={`day-${format(day, 'yyyy-MM-dd')}`}
           >
             <div className="flex justify-between items-center">
               <time

@@ -26,7 +26,7 @@ describe('MobileNavigation Component', () => {
     );
 
   test('renders navigation items correctly', () => {
-    renderComponent(true, false);
+    const { container } = renderComponent(true, false);
 
     const linkedinItem = screen.getByTestId('nav-item-Linkedin');
     expect(linkedinItem).toBeInTheDocument();
@@ -43,47 +43,59 @@ describe('MobileNavigation Component', () => {
       'href',
       'https://github.com/frontandrews',
     );
+
+    expect(container).toMatchSnapshot();
   });
 
   test('renders HostSoft link correctly', () => {
-    renderComponent(true, false);
+    const { container } = renderComponent(true, false);
 
     const hostSoftLink = screen.getByText('HostSoft');
     expect(hostSoftLink).toBeInTheDocument();
     expect(hostSoftLink).toHaveAttribute('href', '/');
+
+    expect(container).toMatchSnapshot();
   });
 
   test('renders login link when not authenticated', () => {
-    renderComponent(true, false);
+    const { container } = renderComponent(true, false);
 
     const loginLink = screen.getByText('Log in');
     expect(loginLink).toBeInTheDocument();
     expect(loginLink).toHaveAttribute('href', '/sign-in');
+
+    expect(container).toMatchSnapshot();
   });
 
   test('renders logout button when authenticated', () => {
-    renderComponent(true, true);
+    const { container } = renderComponent(true, true);
 
     const logoutButton = screen.getByText('Logout');
     expect(logoutButton).toBeInTheDocument();
     fireEvent.click(logoutButton);
     expect(handleLogout).toHaveBeenCalledTimes(1);
+
+    expect(container).toMatchSnapshot();
   });
 
   test('closes menu when close button is clicked', () => {
-    renderComponent(true, false);
+    const { container } = renderComponent(true, false);
 
     const closeButton = screen.getByRole('button', { name: 'Close menu' });
     expect(closeButton).toBeInTheDocument();
     fireEvent.click(closeButton);
     expect(setMobileMenuOpen).toHaveBeenCalledWith(false);
+
+    expect(container).toMatchSnapshot();
   });
 
   test('does not render navigation when menu is closed', () => {
-    renderComponent(false, false);
+    const { container } = renderComponent(false, false);
 
     expect(screen.queryByTestId('nav-item-Linkedin')).not.toBeInTheDocument();
     expect(screen.queryByTestId('nav-item-Github')).not.toBeInTheDocument();
     expect(screen.queryByText('HostSoft')).not.toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 });

@@ -1,0 +1,335 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PropertyList Component displays no results message when search term does not match any property 1`] = `
+<div>
+  <div
+    class="border p-6"
+  >
+    <div
+      class="flex justify-between items-center flex-row"
+    >
+      <h1
+        class="flex items-center gap-2 text-2xl font-semibold leading-6 py-3 lg:py-6"
+        data-testid="property-header"
+      >
+        Properties
+         
+        <span
+          class="text-sm leading-[0.9] text-gray-500"
+          data-testid="property-count"
+        >
+          (
+          0
+          /
+          2
+          )
+        </span>
+      </h1>
+      <div
+        class="pb-3 pt-3 pr-0 lg:pr-4"
+      >
+        <div
+          data-testid="property-dialog"
+        >
+          PropertyDialog
+        </div>
+      </div>
+    </div>
+    <div
+      class="pb-6 pr-0 lg:pr-4"
+    >
+      <input
+        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+        placeholder="Search"
+        value="Three"
+      />
+    </div>
+    <div>
+      <ul
+        class="h-[200px] lg:h-[390px] overflow-y-auto pr-1.5 lg:pr-2 custom-scroll"
+      >
+        <p>
+          No results found for the search criteria.
+        </p>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PropertyList Component filters properties based on search term 1`] = `
+<div>
+  <div
+    class="border p-6"
+  >
+    <div
+      class="flex justify-between items-center flex-row"
+    >
+      <h1
+        class="flex items-center gap-2 text-2xl font-semibold leading-6 py-3 lg:py-6"
+        data-testid="property-header"
+      >
+        Properties
+         
+        <span
+          class="text-sm leading-[0.9] text-gray-500"
+          data-testid="property-count"
+        >
+          (
+          1
+          /
+          2
+          )
+        </span>
+      </h1>
+      <div
+        class="pb-3 pt-3 pr-0 lg:pr-4"
+      >
+        <div
+          data-testid="property-dialog"
+        >
+          PropertyDialog
+        </div>
+      </div>
+    </div>
+    <div
+      class="pb-6 pr-0 lg:pr-4"
+    >
+      <input
+        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+        placeholder="Search"
+        value="One"
+      />
+    </div>
+    <div>
+      <ul
+        class="h-[200px] lg:h-[390px] overflow-y-auto pr-1.5 lg:pr-2 custom-scroll"
+      >
+        <li
+          class="flex border justify-between items-center mb-4 p-4 shadow rounded cursor-pointer bg-gray-100 border-"
+        >
+          <div>
+            <h2
+              class="text-xl font-bold"
+            >
+              Property One
+            </h2>
+            <p>
+              Location One
+            </p>
+          </div>
+          <div
+            class="flex space-x-4"
+          >
+            <div
+              data-testid="property-dialog"
+            >
+              PropertyDialog
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PropertyList Component renders PropertyDialog component for each property 1`] = `
+<div>
+  <div
+    class="border p-6"
+  >
+    <div
+      class="flex justify-between items-center flex-row"
+    >
+      <h1
+        class="flex items-center gap-2 text-2xl font-semibold leading-6 py-3 lg:py-6"
+        data-testid="property-header"
+      >
+        Properties
+         
+        <span
+          class="text-sm leading-[0.9] text-gray-500"
+          data-testid="property-count"
+        >
+          (
+          2
+          /
+          2
+          )
+        </span>
+      </h1>
+      <div
+        class="pb-3 pt-3 pr-0 lg:pr-4"
+      >
+        <div
+          data-testid="property-dialog"
+        >
+          PropertyDialog
+        </div>
+      </div>
+    </div>
+    <div
+      class="pb-6 pr-0 lg:pr-4"
+    >
+      <input
+        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+        placeholder="Search"
+        value=""
+      />
+    </div>
+    <div>
+      <ul
+        class="h-[200px] lg:h-[390px] overflow-y-auto pr-1.5 lg:pr-2 custom-scroll"
+      >
+        <li
+          class="flex border justify-between items-center mb-4 p-4 shadow rounded cursor-pointer bg-gray-100 border-"
+        >
+          <div>
+            <h2
+              class="text-xl font-bold"
+            >
+              Property One
+            </h2>
+            <p>
+              Location One
+            </p>
+          </div>
+          <div
+            class="flex space-x-4"
+          >
+            <div
+              data-testid="property-dialog"
+            >
+              PropertyDialog
+            </div>
+          </div>
+        </li>
+        <li
+          class="flex border justify-between items-center mb-4 p-4 shadow rounded cursor-pointer bg-white hover:bg-gray-50"
+        >
+          <div>
+            <h2
+              class="text-xl font-bold"
+            >
+              Property Two
+            </h2>
+            <p>
+              Location Two
+            </p>
+          </div>
+          <div
+            class="flex space-x-4"
+          >
+            <div
+              data-testid="property-dialog"
+            >
+              PropertyDialog
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PropertyList Component renders all properties and displays correct count 1`] = `
+<div>
+  <div
+    class="border p-6"
+  >
+    <div
+      class="flex justify-between items-center flex-row"
+    >
+      <h1
+        class="flex items-center gap-2 text-2xl font-semibold leading-6 py-3 lg:py-6"
+        data-testid="property-header"
+      >
+        Properties
+         
+        <span
+          class="text-sm leading-[0.9] text-gray-500"
+          data-testid="property-count"
+        >
+          (
+          2
+          /
+          2
+          )
+        </span>
+      </h1>
+      <div
+        class="pb-3 pt-3 pr-0 lg:pr-4"
+      >
+        <div
+          data-testid="property-dialog"
+        >
+          PropertyDialog
+        </div>
+      </div>
+    </div>
+    <div
+      class="pb-6 pr-0 lg:pr-4"
+    >
+      <input
+        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+        placeholder="Search"
+        value=""
+      />
+    </div>
+    <div>
+      <ul
+        class="h-[200px] lg:h-[390px] overflow-y-auto pr-1.5 lg:pr-2 custom-scroll"
+      >
+        <li
+          class="flex border justify-between items-center mb-4 p-4 shadow rounded cursor-pointer bg-gray-100 border-"
+        >
+          <div>
+            <h2
+              class="text-xl font-bold"
+            >
+              Property One
+            </h2>
+            <p>
+              Location One
+            </p>
+          </div>
+          <div
+            class="flex space-x-4"
+          >
+            <div
+              data-testid="property-dialog"
+            >
+              PropertyDialog
+            </div>
+          </div>
+        </li>
+        <li
+          class="flex border justify-between items-center mb-4 p-4 shadow rounded cursor-pointer bg-white hover:bg-gray-50"
+        >
+          <div>
+            <h2
+              class="text-xl font-bold"
+            >
+              Property Two
+            </h2>
+            <p>
+              Location Two
+            </p>
+          </div>
+          <div
+            class="flex space-x-4"
+          >
+            <div
+              data-testid="property-dialog"
+            >
+              PropertyDialog
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

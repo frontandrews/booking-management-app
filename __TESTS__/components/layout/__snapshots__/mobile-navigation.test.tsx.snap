@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MobileNavigation Component closes menu when close button is clicked 1`] = `<div />`;
+
+exports[`MobileNavigation Component does not render navigation when menu is closed 1`] = `<div />`;
+
+exports[`MobileNavigation Component renders HostSoft link correctly 1`] = `<div />`;
+
+exports[`MobileNavigation Component renders login link when not authenticated 1`] = `<div />`;
+
+exports[`MobileNavigation Component renders logout button when authenticated 1`] = `<div />`;
+
+exports[`MobileNavigation Component renders navigation items correctly 1`] = `
+<div
+  aria-hidden="true"
+/>
+`;

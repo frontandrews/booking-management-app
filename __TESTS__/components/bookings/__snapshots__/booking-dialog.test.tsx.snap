@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookingDialog Component closes the dialog when BookingForm calls onClose 1`] = `
+<div>
+  <button
+    aria-controls="radix-:rc:"
+    aria-expanded="false"
+    aria-haspopup="dialog"
+    class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 ml-2 undefined"
+    data-state="closed"
+    type="button"
+  >
+    <svg
+      class="lucide lucide-plus w-4 h-4 mr-2"
+      fill="none"
+      height="24"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 12h14"
+      />
+      <path
+        d="M12 5v14"
+      />
+    </svg>
+    Reservation
+  </button>
+</div>
+`;
+
+exports[`BookingDialog Component displays Edit Reservation when bookingId is provided 1`] = `
+<div
+  aria-hidden="true"
+  data-aria-hidden="true"
+>
+  <button
+    aria-controls="radix-:r8:"
+    aria-expanded="true"
+    aria-haspopup="dialog"
+    class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 ml-2 undefined"
+    data-state="open"
+    type="button"
+  >
+    <svg
+      class="lucide lucide-plus w-4 h-4 mr-2"
+      fill="none"
+      height="24"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 12h14"
+      />
+      <path
+        d="M12 5v14"
+      />
+    </svg>
+    Reservation
+  </button>
+</div>
+`;
+
+exports[`BookingDialog Component renders children as the trigger and opens the dialog 1`] = `
+<div
+  aria-hidden="true"
+  data-aria-hidden="true"
+>
+  <div
+    aria-controls="radix-:r4:"
+    aria-expanded="true"
+    aria-haspopup="dialog"
+    class=""
+    data-state="open"
+    type="button"
+  >
+    <button
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+    >
+      Open Dialog
+    </button>
+  </div>
+</div>
+`;
+
+exports[`BookingDialog Component renders the default button and opens the dialog 1`] = `
+<div
+  aria-hidden="true"
+  data-aria-hidden="true"
+>
+  <button
+    aria-controls="radix-:r0:"
+    aria-expanded="true"
+    aria-haspopup="dialog"
+    class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 ml-2 undefined"
+    data-state="open"
+    type="button"
+  >
+    <svg
+      class="lucide lucide-plus w-4 h-4 mr-2"
+      fill="none"
+      height="24"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 12h14"
+      />
+      <path
+        d="M12 5v14"
+      />
+    </svg>
+    Reservation
+  </button>
+</div>
+`;

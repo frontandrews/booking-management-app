@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { PropertyDialog } from '@/components/bookings/property-dialog';
 import { setSelectedPropertyId } from '@/redux/features/property/slice';
 import { fetchBookings } from '@/redux/features/booking/slice';
-import { RootState, AppDispatch } from '@/redux/store';
 import { cn } from '@/utils';
 import { Input } from '../ui/input';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
 export default function PropertyList() {
-  const dispatch = useDispatch<AppDispatch>();
-  const properties = useSelector(
-    (state: RootState) => state.property.properties,
-  );
+  const dispatch = useAppDispatch();
+  const properties = useAppSelector((state) => state.property.properties);
 
-  const selectedPropertyId = useSelector(
-    (state: RootState) => state.property.selectedPropertyId,
+  const selectedPropertyId = useAppSelector(
+    (state) => state.property.selectedPropertyId,
   );
 
   const [searchTerm, setSearchTerm] = useState('');

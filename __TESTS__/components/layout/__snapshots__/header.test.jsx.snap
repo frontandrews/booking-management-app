@@ -1,0 +1,320 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component handles mobile menu toggle 1`] = `
+<div>
+  <header
+    class="bg-primary"
+  >
+    <nav
+      aria-label="Global"
+      class="slide-up flex items-center justify-between p-6 lg:px-8  container mx-auto"
+    >
+      <div
+        class="flex lg:flex-1"
+      >
+        <a
+          class="-m-1.5 p-1.5 text-2xl font-bold leading-6 text-white"
+          href="/"
+        >
+          HostSoft
+        </a>
+      </div>
+      <div
+        class="flex lg:hidden"
+      >
+        <button
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
+          type="button"
+        >
+          <span
+            class="sr-only"
+          >
+            Open main menu
+          </span>
+          <svg
+            aria-hidden="true"
+            class="h-6 w-6"
+            data-slot="icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        data-testid="desktop-navigation"
+      >
+        DesktopNavigation
+      </div>
+      <div
+        class="hidden lg:flex lg:flex-1 lg:justify-end"
+      >
+        <a
+          class="text-sm font-semibold leading-6 text-white"
+          href="/sign-in"
+        >
+          Log in 
+          <span
+            aria-hidden="true"
+          >
+            →
+          </span>
+        </a>
+      </div>
+    </nav>
+    <div
+      data-testid="mobile-navigation"
+    >
+      MobileNavigation 
+      Closed
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Header Component renders Header correctly 1`] = `
+<div>
+  <header
+    class="bg-primary"
+  >
+    <nav
+      aria-label="Global"
+      class="slide-up flex items-center justify-between p-6 lg:px-8  container mx-auto"
+    >
+      <div
+        class="flex lg:flex-1"
+      >
+        <a
+          class="-m-1.5 p-1.5 text-2xl font-bold leading-6 text-white"
+          href="/"
+        >
+          HostSoft
+        </a>
+      </div>
+      <div
+        class="flex lg:hidden"
+      >
+        <button
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
+          type="button"
+        >
+          <span
+            class="sr-only"
+          >
+            Open main menu
+          </span>
+          <svg
+            aria-hidden="true"
+            class="h-6 w-6"
+            data-slot="icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        data-testid="desktop-navigation"
+      >
+        DesktopNavigation
+      </div>
+      <div
+        class="hidden lg:flex lg:flex-1 lg:justify-end"
+      >
+        <a
+          class="text-sm font-semibold leading-6 text-white"
+          href="/sign-in"
+        >
+          Log in 
+          <span
+            aria-hidden="true"
+          >
+            →
+          </span>
+        </a>
+      </div>
+    </nav>
+    <div
+      data-testid="mobile-navigation"
+    >
+      MobileNavigation 
+      Closed
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Header Component renders login link when not authenticated 1`] = `
+<div>
+  <header
+    class="bg-primary"
+  >
+    <nav
+      aria-label="Global"
+      class="slide-up flex items-center justify-between p-6 lg:px-8  container mx-auto"
+    >
+      <div
+        class="flex lg:flex-1"
+      >
+        <a
+          class="-m-1.5 p-1.5 text-2xl font-bold leading-6 text-white"
+          href="/"
+        >
+          HostSoft
+        </a>
+      </div>
+      <div
+        class="flex lg:hidden"
+      >
+        <button
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
+          type="button"
+        >
+          <span
+            class="sr-only"
+          >
+            Open main menu
+          </span>
+          <svg
+            aria-hidden="true"
+            class="h-6 w-6"
+            data-slot="icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        data-testid="desktop-navigation"
+      >
+        DesktopNavigation
+      </div>
+      <div
+        class="hidden lg:flex lg:flex-1 lg:justify-end"
+      >
+        <a
+          class="text-sm font-semibold leading-6 text-white"
+          href="/sign-in"
+        >
+          Log in 
+          <span
+            aria-hidden="true"
+          >
+            →
+          </span>
+        </a>
+      </div>
+    </nav>
+    <div
+      data-testid="mobile-navigation"
+    >
+      MobileNavigation 
+      Closed
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Header Component renders logout link when authenticated 1`] = `
+<div>
+  <header
+    class="bg-primary"
+  >
+    <nav
+      aria-label="Global"
+      class="slide-up flex items-center justify-between p-6 lg:px-8  container mx-auto"
+    >
+      <div
+        class="flex lg:flex-1"
+      >
+        <a
+          class="-m-1.5 p-1.5 text-2xl font-bold leading-6 text-white"
+          href="/bookings"
+        >
+          HostSoft
+        </a>
+      </div>
+      <div
+        class="flex lg:hidden"
+      >
+        <button
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
+          type="button"
+        >
+          <span
+            class="sr-only"
+          >
+            Open main menu
+          </span>
+          <svg
+            aria-hidden="true"
+            class="h-6 w-6"
+            data-slot="icon"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        data-testid="desktop-navigation"
+      >
+        DesktopNavigation
+      </div>
+      <div
+        class="hidden lg:flex lg:flex-1 lg:justify-end"
+      >
+        <div
+          class="text-sm font-semibold leading-6 text-white cursor-pointer"
+        >
+          Logout 
+          <span
+            aria-hidden="true"
+          >
+            →
+          </span>
+        </div>
+      </div>
+    </nav>
+    <div
+      data-testid="mobile-navigation"
+    >
+      MobileNavigation 
+      Closed
+    </div>
+  </header>
+</div>
+`;

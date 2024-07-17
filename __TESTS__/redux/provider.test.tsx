@@ -1,37 +1,61 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { store } from '@/redux/store';
-import { ReduxProvider } from '@/redux/provider';
-import { useSelector } from 'react-redux';
-import { RootState } from '@/redux/store';
+import { createTestStore, renderWithProviders } from '@/utils/test-utils';
+import { useAppSelector } from '@/redux/hooks';
 
-const SampleComponent = () => {
-  const isAuthenticated = useSelector(
-    (state: RootState) => state.auth.user.isAuthenticated,
+const SampleComponent: React.FC = () => {
+  const isAuthenticated = useAppSelector(
+    (state) => state.auth.user.isAuthenticated,
   );
   return <div>{isAuthenticated ? 'Authenticated' : 'Not Authenticated'}</div>;
 };
 
-describe('ReduxProvider Component', () => {
-  const renderWithReduxProvider = (ui: React.ReactNode) =>
-    render(<ReduxProvider>{ui}</ReduxProvider>);
-
+describe('StoreProvider Component', () => {
   test('provides the Redux store to child components', () => {
-    renderWithReduxProvider(<SampleComponent />);
+    const { store } = renderWithProviders(<SampleComponent />);
 
     const initialState = store.getState();
+    const authText = initialState.auth.user.isAuthenticated
+      ? 'Authenticated'
+      : 'Not Authenticated';
 
-    if (initialState.auth.user.isAuthenticated) {
-      expect(screen.getByText('Authenticated')).toBeInTheDocument();
-    } else {
-      expect(screen.getByText('Not Authenticated')).toBeInTheDocument();
-    }
+    expect(screen.getByText(authText)).toBeInTheDocument();
   });
 
   test('renders children correctly', () => {
-    renderWithReduxProvider(<div>Test Child</div>);
+    renderWithProviders(<div>Test Child</div>);
 
     expect(screen.getByText('Test Child')).toBeInTheDocument();
+  });
+
+  test('renders with preloaded state', () => {
+    const preloadedState = {
+      auth: {
+        user: {
+          isAuthenticated: true,
+        },
+      },
+    };
+
+    renderWithProviders(<SampleComponent />, { preloadedState });
+
+    expect(screen.getByText('Authenticated')).toBeInTheDocument();
+  });
+
+  test('renders with custom store', () => {
+    const customStore = createTestStore({
+      preloadedState: {
+        auth: {
+          user: {
+            isAuthenticated: true,
+          },
+        },
+      },
+    });
+
+    renderWithProviders(<SampleComponent />, { store: customStore });
+
+    expect(screen.getByText('Authenticated')).toBeInTheDocument();
   });
 });

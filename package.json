@@ -15,6 +15,7 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.5",
     "@hookform/resolvers": "^3.9.0",
@@ -32,6 +33,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
+    "gsap": "^3.12.5",
     "lucide-react": "^0.408.0",
     "next": "14.2.5",
     "react": "^18.3.1",

@@ -1,4 +1,5 @@
 import MainHero from '@/components/homepage/main-hero';
+import LoaderWrap from '@/components/ui/loader-wrap';
 import Image from 'next/image';
 
 export default function Home() {
@@ -37,8 +38,10 @@ export default function Home() {
 
   return (
     <>
+      <LoaderWrap />
+
       <MainHero />
-      <div className="container mx-auto mt-8 px-4">
+      <div className="container mx-auto mt-8 px-4 slide-up">
         {gifs.map((gif, index) => (
           <div key={index} className="flex flex-col mb-8">
             <div className="mb-4">

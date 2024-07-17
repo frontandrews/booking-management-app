@@ -14,7 +14,6 @@ import { Day, BookingViewProps } from './types';
 
 const BookingView = ({ bookings = [] }: BookingViewProps) => {
   const [currentMonth, setCurrentMonth] = useState<Date>(new Date());
-  const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [days, setDays] = useState<Day[]>([]);
 
   useEffect(() => {
@@ -45,10 +44,6 @@ const BookingView = ({ bookings = [] }: BookingViewProps) => {
     setCurrentMonth(new Date());
   };
 
-  const handleDateSelect = (date: Day) => {
-    setSelectedDate(date);
-  };
-
   return (
     <div className="lg:flex lg:h-full lg:flex-col px-4 pb-4 border">
       <BookingHeader
@@ -57,13 +52,7 @@ const BookingView = ({ bookings = [] }: BookingViewProps) => {
         onNextMonth={handleNextMonth}
         onToday={handleToday}
       />
-      <Calendar
-        days={days}
-        currentMonth={currentMonth}
-        selectedDate={selectedDate}
-        bookings={bookings}
-        onDateSelect={handleDateSelect}
-      />
+      <Calendar days={days} currentMonth={currentMonth} bookings={bookings} />
     </div>
   );
 };

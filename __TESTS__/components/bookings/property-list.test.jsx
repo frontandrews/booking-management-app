@@ -58,7 +58,7 @@ describe('PropertyList Component', () => {
     );
 
   test('renders all properties and displays correct count', () => {
-    renderComponent();
+    const { container } = renderComponent();
 
     expect(screen.getByTestId('property-header').textContent).toMatch(
       /Properties\s+\(2\/2\)/,
@@ -67,10 +67,12 @@ describe('PropertyList Component', () => {
     expect(screen.getByText('Location One')).toBeInTheDocument();
     expect(screen.getByText('Property Two')).toBeInTheDocument();
     expect(screen.getByText('Location Two')).toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 
   test('filters properties based on search term', () => {
-    renderComponent();
+    const { container } = renderComponent();
 
     const searchInput = screen.getByPlaceholderText('Search');
     fireEvent.change(searchInput, { target: { value: 'One' } });
@@ -79,12 +81,12 @@ describe('PropertyList Component', () => {
     expect(propertyCount).toHaveTextContent('(1/2)');
     expect(screen.getByText('Property One')).toBeInTheDocument();
     expect(screen.queryByText('Property Two')).not.toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 
-  test.todo('handles property click and dispatches actions');
-
   test('displays no results message when search term does not match any property', () => {
-    renderComponent();
+    const { container } = renderComponent();
 
     const searchInput = screen.getByPlaceholderText('Search');
     fireEvent.change(searchInput, { target: { value: 'Three' } });
@@ -92,12 +94,18 @@ describe('PropertyList Component', () => {
     expect(
       screen.getByText('No results found for the search criteria.'),
     ).toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 
   test('renders PropertyDialog component for each property', () => {
-    renderComponent();
+    const { container } = renderComponent();
 
     const propertyDialogs = screen.getAllByTestId('property-dialog');
     expect(propertyDialogs.length).toBe(3);
+
+    expect(container).toMatchSnapshot();
   });
+
+  test.todo('handles property click and dispatches actions');
 });

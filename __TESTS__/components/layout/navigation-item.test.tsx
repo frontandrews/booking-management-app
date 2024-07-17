@@ -23,7 +23,7 @@ jest.mock('@/components/ui/button', () => ({
 
 describe('NavigationItem Component', () => {
   test('renders external link correctly', () => {
-    render(
+    const { container } = render(
       <NavigationItem name="External Link" href="https://www.example.com" />,
     );
 
@@ -33,15 +33,21 @@ describe('NavigationItem Component', () => {
     expect(externalLink).toHaveAttribute('target', '_blank');
     expect(externalLink).toHaveAttribute('rel', 'noopener noreferrer');
     expect(externalLink).toHaveClass('ghost text-white');
+
+    expect(container).toMatchSnapshot();
   });
 
   test('renders internal link correctly', () => {
-    render(<NavigationItem name="Internal Link" href="/internal" />);
+    const { container } = render(
+      <NavigationItem name="Internal Link" href="/internal" />,
+    );
 
     const internalLink = screen.getByText('Internal Link');
     expect(internalLink).toBeInTheDocument();
     expect(internalLink).toHaveAttribute('href', '/internal');
     expect(internalLink).not.toHaveAttribute('target');
     expect(internalLink).not.toHaveAttribute('rel');
+
+    expect(container).toMatchSnapshot();
   });
 });

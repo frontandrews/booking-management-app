@@ -69,19 +69,23 @@ describe('Header Component', () => {
     );
 
   test('renders Header correctly', () => {
-    renderComponent();
+    const { container } = renderComponent();
 
     expect(screen.getByText('HostSoft')).toBeInTheDocument();
     expect(screen.getByTestId('desktop-navigation')).toBeInTheDocument();
     expect(
       screen.getByRole('button', { name: /open main menu/i }),
     ).toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 
   test('renders login link when not authenticated', () => {
-    renderComponent();
+    const { container } = renderComponent();
 
     expect(screen.getByText('Log in')).toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 
   test('renders logout link when authenticated', () => {
@@ -93,15 +97,17 @@ describe('Header Component', () => {
       },
     });
 
-    renderComponent();
+    const { container } = renderComponent();
 
     expect(screen.getByText('Logout')).toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 
   test.todo('handles logout click');
 
   test('handles mobile menu toggle', () => {
-    renderComponent();
+    const { container } = renderComponent();
 
     const openMenuButton = screen.getByRole('button', {
       name: /open main menu/i,
@@ -118,5 +124,7 @@ describe('Header Component', () => {
     expect(screen.getByTestId('mobile-navigation')).toHaveTextContent(
       'MobileNavigation Closed',
     );
+
+    expect(container).toMatchSnapshot();
   });
 });

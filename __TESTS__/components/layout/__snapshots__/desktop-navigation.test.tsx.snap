@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DesktopNavigation Component applies correct classes to the navigation container 1`] = `
+<div>
+  <div
+    class="hidden lg:flex lg:gap-x-12"
+    data-testid="desktop-navigation"
+  >
+    <a
+      data-testid="nav-item-Linkedin"
+      href="https://www.linkedin.com/in/andrewsgomes/"
+    >
+      Linkedin
+    </a>
+    <a
+      data-testid="nav-item-Github"
+      href="https://github.com/frontandrews"
+    >
+      Github
+    </a>
+  </div>
+</div>
+`;
+
+exports[`DesktopNavigation Component renders the navigation items correctly 1`] = `
+<div>
+  <div
+    class="hidden lg:flex lg:gap-x-12"
+    data-testid="desktop-navigation"
+  >
+    <a
+      data-testid="nav-item-Linkedin"
+      href="https://www.linkedin.com/in/andrewsgomes/"
+    >
+      Linkedin
+    </a>
+    <a
+      data-testid="nav-item-Github"
+      href="https://github.com/frontandrews"
+    >
+      Github
+    </a>
+  </div>
+</div>
+`;

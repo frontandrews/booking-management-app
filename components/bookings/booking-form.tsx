@@ -4,8 +4,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm, FormProvider } from 'react-hook-form';
 import { z } from 'zod';
 import { useToast } from '@/components/ui/use-toast';
-import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '@/redux/store';
 import {
   createBooking,
   updateBooking,
@@ -21,6 +19,7 @@ import { DatePickerWithRange } from '@/components/ui/date-picker-with-range';
 import { ThreeDots } from 'react-loader-spinner';
 import { TrashIcon } from 'lucide-react';
 import FormField from '@/components/ui/form-field';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
 const formSchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -47,11 +46,11 @@ export default function BookingForm({ bookingId, onClose }: BookingFormProps) {
   const [formError, setFormError] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [totalPrice, setTotalPrice] = useState<number>(0);
-  const dispatch = useDispatch<AppDispatch>();
-  const bookings = useSelector((state: RootState) => state.booking.bookings);
-  const loading = useSelector((state: RootState) => state.booking.loading);
-  const propertyId = useSelector(
-    (state: RootState) => state.property.selectedPropertyId,
+  const dispatch = useAppDispatch();
+  const bookings = useAppSelector((state) => state.booking.bookings);
+  const loading = useAppSelector((state) => state.booking.loading);
+  const propertyId = useAppSelector(
+    (state) => state.property.selectedPropertyId,
   );
 
   const methods = useForm({

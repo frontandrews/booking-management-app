@@ -91,3 +91,20 @@
 .custom-scroll::-webkit-scrollbar-thumb:hover {
   background: #f3f3f3;
 }
+
+@keyframes slideUpAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.slide-up {
+  opacity: 0;
+  animation: slideUpAnimation 1s forwards;
+  animation-delay: 1.5s;
+}

@@ -21,9 +21,9 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { useController, useFormContext } from 'react-hook-form';
-import { useSelector } from 'react-redux';
 import { useToast } from '@/components/ui/use-toast';
 import { RootState } from '@/redux/store';
+import { useAppSelector } from '@/redux/hooks';
 
 interface DatePickerWithRangeProps {
   name: string;
@@ -55,7 +55,7 @@ export function DatePickerWithRange({
   }, [value]);
 
   const today = startOfToday();
-  const bookings = useSelector((state: RootState) => state.booking.bookings);
+  const bookings = useAppSelector((state: RootState) => state.booking.bookings);
 
   const isDayDisabled = (day: Date) => {
     const normalizedDay = startOfDay(day);

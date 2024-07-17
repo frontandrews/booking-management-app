@@ -2,7 +2,7 @@ import { Property } from '@/components/bookings/types';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-interface PropertyState {
+export interface PropertyState {
   properties: Property[];
   selectedPropertyId: number | null;
   selectedProperty: Property | null;
@@ -58,7 +58,7 @@ export const deleteProperty = createAsyncThunk(
   },
 );
 
-const propertySlice = createSlice({
+export const propertySlice = createSlice({
   name: 'property',
   initialState,
   reducers: {

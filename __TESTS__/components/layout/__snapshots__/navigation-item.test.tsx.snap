@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationItem Component renders external link correctly 1`] = `
+<div>
+  <a
+    class="ghost text-white"
+    href="https://www.example.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    External Link
+  </a>
+</div>
+`;
+
+exports[`NavigationItem Component renders internal link correctly 1`] = `
+<div>
+  <a
+    href="/internal"
+  >
+    Internal Link
+  </a>
+</div>
+`;
