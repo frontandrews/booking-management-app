@@ -1,17 +1,3 @@
-## Getting Started
+# booking-management-app
 
-First, run the api:
-
-```bash
-yarn server:run
-
-```
-
-Second, run the app:
-
-```bash
-yarn dev
-
-```
-
-TODO: Add readme
+A app for managing bookings using Next 14, React 18, TS, Redux, Tailwind, Radix, Tailwind, React Hook Form, Jest
