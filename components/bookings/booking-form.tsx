@@ -1,5 +1,4 @@
-'use client';
-
+import React, { useState, useEffect } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm, FormProvider } from 'react-hook-form';
 import { z } from 'zod';
@@ -12,13 +11,13 @@ import {
   fetchBookingById,
 } from '@/redux/features/booking/slice';
 import { Button } from '@/components/ui/button';
-import { useEffect, useState } from 'react';
-import { getErrorMessage } from '@/utils';
+import { formatCurrency, getErrorMessage } from '@/utils';
 import { parseISO, startOfDay, format } from 'date-fns';
 import { DatePickerWithRange } from '@/components/ui/date-picker-with-range';
 import { ThreeDots } from 'react-loader-spinner';
 import { TrashIcon } from 'lucide-react';
 import FormField from '@/components/ui/form-field';
+import CurrencyInput from '@/components/ui/currency-input';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
 const formSchema = z.object({
@@ -76,6 +75,7 @@ export default function BookingForm({ bookingId, onClose }: BookingFormProps) {
         if (bookingData) {
           const formattedData = {
             ...bookingData,
+            pricePerDay: formatCurrency(bookingData.pricePerDay),
             dateRange: {
               from: parseISO(bookingData.startDate),
               to: parseISO(bookingData.endDate),
@@ -96,7 +96,7 @@ export default function BookingForm({ bookingId, onClose }: BookingFormProps) {
   ) => {
     const diffTime = Math.abs(endDate.getTime() - startDate.getTime());
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
-    return diffDays * Number(pricePerDay);
+    return diffDays * Number(pricePerDay.replace(/[^0-9.-]+/g, ''));
   };
 
   useEffect(() => {
@@ -136,7 +136,7 @@ export default function BookingForm({ bookingId, onClose }: BookingFormProps) {
 
   const onSubmit = async (data: any) => {
     setIsLoading(true);
-    const { dateRange, ...rest } = data;
+    const { dateRange, pricePerDay, ...rest } = data;
     const newStartDate = startOfDay(dateRange.from);
     const newEndDate = startOfDay(dateRange.to);
 
@@ -153,6 +153,7 @@ export default function BookingForm({ bookingId, onClose }: BookingFormProps) {
       ...rest,
       startDate: formattedStartDate,
       endDate: formattedEndDate,
+      pricePerDay: pricePerDay.replace(/[^0-9.-]+/g, ''),
     };
 
     try {
@@ -245,12 +246,10 @@ export default function BookingForm({ bookingId, onClose }: BookingFormProps) {
                   )}
                 </div>
               </div>
-              <FormField
+              <CurrencyInput
                 id="pricePerDay"
                 label="Price per Day"
-                type="number"
-                register={methods.register}
-                errors={errors}
+                isEdit={Boolean(bookingId)}
               />
               <div>
                 <div className="block text-sm font-medium leading-6 text-gray-900">

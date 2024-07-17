@@ -505,6 +505,38 @@
       "endDate": "2024-07-24",
       "pricePerDay": "200",
       "id": 50
+    },
+    {
+      "name": "Pedro",
+      "propertyId": 15,
+      "startDate": "2024-07-18",
+      "endDate": "2024-07-20",
+      "pricePerDay": "345.24",
+      "id": 51
+    },
+    {
+      "name": "Marcos",
+      "propertyId": 15,
+      "startDate": "2024-07-22",
+      "endDate": "2024-07-24",
+      "pricePerDay": "250.00",
+      "id": 52
+    },
+    {
+      "name": "Michelle",
+      "propertyId": 15,
+      "startDate": "2024-07-25",
+      "endDate": "2024-07-26",
+      "pricePerDay": "1000.00",
+      "id": 53
+    },
+    {
+      "name": "Wendel Bezerra",
+      "propertyId": 15,
+      "startDate": "2024-08-06",
+      "endDate": "2024-08-15",
+      "pricePerDay": "300.00",
+      "id": 54
     }
   ]
 }

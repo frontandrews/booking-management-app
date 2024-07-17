@@ -1,6 +1,6 @@
 {
-  "name": "host-soft",
-  "description": "",
+  "name": "hostsoft",
+  "description": "A booking managament application",
   "version": "0.1.0",
   "private": true,
   "scripts": {

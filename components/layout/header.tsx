@@ -43,7 +43,7 @@ export default function Header() {
     <header className="bg-primary">
       <nav
         aria-label="Global"
-        className="slide-up flex items-center justify-between p-6 lg:px-8  container mx-auto"
+        className="flex items-center justify-between p-6 lg:px-8 container mx-auto"
       >
         <div className="flex lg:flex-1">
           <Link

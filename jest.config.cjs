@@ -19,6 +19,7 @@ const customJestConfig = {
     '!**/*.d.ts',
     'app/**/*.{js,jsx,ts,tsx}',
     'components/**/*.{js,jsx,ts,tsx}',
+    '!app/layout.tsx',
     '!app/api/**/*.{js,jsx,ts,tsx}', // Already added validations in the form
     '!components/ui/**', // Exclude files in components/ui folder as they are from shadcn/ui and already was tested by the shadcn/ui package
   ],

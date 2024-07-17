@@ -54,3 +54,16 @@ export const validateId = (id: string | undefined) => {
   }
   return { valid: true, message: '' };
 };
+
+export const formatCurrency = (value: string) => {
+  const numberValue = parseFloat(value.replace(/[^0-9.-]+/g, ''));
+  if (isNaN(numberValue)) {
+    return '';
+  }
+  return numberValue.toLocaleString('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+};
