@@ -66,7 +66,11 @@ describe('property slice', () => {
   });
 
   test('should handle fetchPropertyById.fulfilled', async () => {
-    const mockProperty: Property = { id: 1, name: 'Property One', location: 'Location One' };
+    const mockProperty: Property = {
+      id: 1,
+      name: 'Property One',
+      location: 'Location One',
+    };
 
     mockAxios.get.mockResolvedValueOnce({ data: mockProperty });
 
@@ -88,7 +92,11 @@ describe('property slice', () => {
   });
 
   test('should handle createProperty.fulfilled', async () => {
-    const newProperty: Property = { id: 3, name: 'Property Three', location: 'Location Three' };
+    const newProperty: Property = {
+      id: 3,
+      name: 'Property Three',
+      location: 'Location Three',
+    };
 
     mockAxios.post.mockResolvedValueOnce({ data: newProperty });
 
@@ -99,11 +107,17 @@ describe('property slice', () => {
   });
 
   test('should handle updateProperty.fulfilled', async () => {
-    const updatedProperty: Property = { id: 1, name: 'Updated Property', location: 'Updated Location' };
+    const updatedProperty: Property = {
+      id: 1,
+      name: 'Updated Property',
+      location: 'Updated Location',
+    };
 
     mockAxios.put.mockResolvedValueOnce({ data: updatedProperty });
 
-    await store.dispatch(updateProperty({ propertyId: 1, data: updatedProperty }));
+    await store.dispatch(
+      updateProperty({ propertyId: 1, data: updatedProperty }),
+    );
 
     const state = store.getState().property;
     expect(state.loading).toBe(false);

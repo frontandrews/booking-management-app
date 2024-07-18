@@ -37,8 +37,22 @@ describe('booking slice', () => {
 
   test('should handle fetchBookings.fulfilled', async () => {
     const mockBookings: Booking[] = [
-      { id: 1, propertyId: 1, startDate: '2023-06-01', endDate: '2023-06-10', pricePerDay: '100', name: 'John Doe' },
-      { id: 2, propertyId: 1, startDate: '2023-07-01', endDate: '2023-07-10', pricePerDay: '150', name: 'Jane Doe' },
+      {
+        id: 1,
+        propertyId: 1,
+        startDate: '2023-06-01',
+        endDate: '2023-06-10',
+        pricePerDay: '100',
+        name: 'John Doe',
+      },
+      {
+        id: 2,
+        propertyId: 1,
+        startDate: '2023-07-01',
+        endDate: '2023-07-10',
+        pricePerDay: '150',
+        name: 'Jane Doe',
+      },
     ];
 
     mockAxios.get.mockResolvedValueOnce({ data: mockBookings });
@@ -61,7 +75,14 @@ describe('booking slice', () => {
   });
 
   test('should handle fetchBookingById.fulfilled', async () => {
-    const mockBooking: Booking = { id: 1, propertyId: 1, startDate: '2023-06-01', endDate: '2023-06-10', pricePerDay: '100', name: 'John Doe' };
+    const mockBooking: Booking = {
+      id: 1,
+      propertyId: 1,
+      startDate: '2023-06-01',
+      endDate: '2023-06-10',
+      pricePerDay: '100',
+      name: 'John Doe',
+    };
 
     mockAxios.get.mockResolvedValueOnce({ data: mockBooking });
 
@@ -73,7 +94,14 @@ describe('booking slice', () => {
   });
 
   test('should handle createBooking.fulfilled', async () => {
-    const newBooking: Booking = { id: 3, propertyId: 1, startDate: '2023-08-01', endDate: '2023-08-10', pricePerDay: '200', name: 'John Doe' };
+    const newBooking: Booking = {
+      id: 3,
+      propertyId: 1,
+      startDate: '2023-08-01',
+      endDate: '2023-08-10',
+      pricePerDay: '200',
+      name: 'John Doe',
+    };
 
     mockAxios.post.mockResolvedValueOnce({ data: newBooking });
 
@@ -92,6 +120,8 @@ describe('booking slice', () => {
     await store.dispatch(deleteBooking(bookingId));
 
     const state = store.getState().booking;
-    expect(state.bookings.find((booking: Booking) => booking.id === bookingId)).toBeUndefined();
+    expect(
+      state.bookings.find((booking: Booking) => booking.id === bookingId),
+    ).toBeUndefined();
   });
 });

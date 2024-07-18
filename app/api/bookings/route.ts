@@ -15,14 +15,14 @@ export async function POST(request: NextRequest) {
           message:
             'name, propertyId, startDate, endDate, and pricePerDay are required',
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     if (!isValid(parseISO(startDate)) || !isValid(parseISO(endDate))) {
       return NextResponse.json(
         { message: 'Invalid date format' },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
