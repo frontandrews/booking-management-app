@@ -111,6 +111,11 @@
       "name": "Bangkok Riverside Apartment",
       "location": "Bangkok, Thailand",
       "id": 20
+    },
+    {
+      "name": "SF House",
+      "location": "São Francisco, Rio de Janeiro",
+      "id": 21
     }
   ],
   "bookings": [
@@ -475,19 +480,11 @@
       "id": 46
     },
     {
-      "name": "Andrews",
-      "propertyId": 1,
-      "startDate": "2024-07-30",
-      "endDate": "2024-07-31",
-      "pricePerDay": "34",
-      "id": 47
-    },
-    {
-      "name": "Scott",
+      "name": "Scott P",
       "propertyId": 1,
       "startDate": "2024-07-25",
-      "endDate": "2024-07-26",
-      "pricePerDay": "234",
+      "endDate": "2024-07-27",
+      "pricePerDay": "400.00",
       "id": 48
     },
     {
@@ -497,14 +494,6 @@
       "endDate": "2024-08-29",
       "pricePerDay": "300",
       "id": 49
-    },
-    {
-      "name": "Jason",
-      "propertyId": 21,
-      "startDate": "2024-07-16",
-      "endDate": "2024-07-24",
-      "pricePerDay": "200",
-      "id": 50
     },
     {
       "name": "Pedro",
@@ -537,6 +526,14 @@
       "endDate": "2024-08-15",
       "pricePerDay": "300.00",
       "id": 54
+    },
+    {
+      "name": "Jorge",
+      "propertyId": 1,
+      "startDate": "2024-07-24",
+      "endDate": "2024-07-24",
+      "pricePerDay": "144.00",
+      "id": 55
     }
   ]
 }
