@@ -16,6 +16,12 @@
   </a>
 </div>
 
+<div align="center">
+  <br />
+    <img src="public/app/app-view.gif" alt="App View GIF" />
+</div>
+  <br />
+
 <details open="open">
 <summary>Table of Contents</summary>
 
@@ -23,8 +29,7 @@
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Usage](#usage)
-    - [How to Start](#how-to-start)
+  - [How to Start](#how-to-start)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
